@@ -28,13 +28,12 @@ for img in os.listdir(imagePath):
 #from documentation
 def augment_and_show(aug, image):
     image = aug(image=image)['image']
-    #plt.figure(figsize=(10, 10))
-    plt.show(image)
+    plt.figure(figsize=(10, 10))
+    plt.imshow(image)
 
 for img in train_set:
-	#plt.figure(figsize=(10,10))
-	#plt.imshow(img)
-	plt.show(img)
+	plt.figure(figsize=(10,10))
+	plt.imshow(img)
 	augmentation = GaussNoise()
 	augment_and_show(augmentation, img)
 
